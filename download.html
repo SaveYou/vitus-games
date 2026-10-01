@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Bereich</title>
+    <style>
+        /* Setzt das Brawl Stars Bild als festen, bildschirmfüllenden Hintergrund */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Lädt dein Hintergrundbild lokal von der Festplatte */
+            background-image: url('brawl-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            font-family: 'Arial Black', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Der Hauptkasten – leicht durchsichtig weiß, damit der Hintergrund durchschimmert */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9); /* 90% weiß, 10% durchsichtig */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            max-width: 950px;
+            width: 100%;
+            gap: 30px;
+            box-sizing: border-box;
+        }
+
+        /* Das gemeinsame Aussehen für beide großen Kästen */
+        .big-box {
+            flex: 1;
+            height: 250px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column; /* Richtet Inhalte von oben nach unten aus */
+            justify-content: space-between; /* Verteilt Text und Bild mit absolut gleichen Abständen */
+            align-items: center;
+            padding: 25px 20px; /* Perfekter, gleichmäßiger Innenabstand zu allen Rändern */
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        /* Text-Style für das obere Label */
+        .download-label {
+            color: #ffffff;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* Der linke Kasten: Apple App Store Blau */
+        .blue-box {
+            background-color: #007AFF; 
+            box-shadow: 0 8px 0 #0056b3, 0 10px 20px rgba(0,0,0,0.2); 
+        }
+
+        .blue-box:hover {
+            background-color: #3395ff; 
+        }
+
+        /* Der rechte Kasten: Google Play Store Grün */
+        .green-box {
+            background-color: #00875A; 
+            box-shadow: 0 8px 0 #005c3e, 0 10px 20px rgba(0,0,0,0.2); 
+        }
+
+        .green-box:hover {
+            background-color: #00a870; 
+        }
+
+        /* Stylt die Logos in den Kästen perfekt symmetrisch */
+        .store-logo {
+            max-height: 110px; /* Perfekte Höhe, damit beide Logos gleich groß wirken */
+            width: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Der Klick-Effekt für beide Kästen */
+        .big-box:active {
+            transform: translateY(8px);
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- DER LINKE KASTEN: Öffnet die offizielle Apple App Store Webseite in einem neuen Tab -->
+        <a href="https://apps.apple.com/de/app/brawl-stars/id1229016807" target="_blank" class="big-box blue-box">
+            <p class="download-label">Download it on</p>
+            <!-- Lädt deine lokale Datei appstore.png direkt von der Festplatte -->
+            <img src="appstore.png" alt="App Store" class="store-logo">
+        </a>
+
+        <!-- DER RECHTE KASTEN: Öffnet die offizielle Google Play Store Webseite in einem neuen Tab -->
+        <a href="https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=de" target="_blank" class="big-box green-box">
+            <p class="download-label">Download it on</p>
+            <!-- Lädt dein lokales Bild playstore.png.webp von der Festplatte -->
+            <img src="playstore.png.webp" alt="Google Play" class="store-logo">
+        </a>
+    </div>
+
+</body>
+</html>

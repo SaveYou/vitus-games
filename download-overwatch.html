@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Bereich - Overwatch</title>
+    <style>
+        /* Hintergrund mit dem coolen Wellen-Muster */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            /* Hintergrundbild aus deinem Ordner als Muster eingebunden */
+            background-image: url('Hintergrund programmieren.avif');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* Der weiße Kasten in der Mitte */
+        .download-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        /* Standard-Styling für die großen Klick-Flächen (Kästen) */
+        .download-card {
+            flex: 1;
+            max-width: 350px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .download-card:active {
+            transform: translateY(0);
+        }
+
+        /* Blauer Kasten für Steam */
+        .steam-card {
+            background-color: #007bff;
+            border-bottom: 6px solid #0056b3;
+        }
+
+        /* Grüner Kasten für die Overwatch Website */
+        .website-card {
+            background-color: #008744;
+            border-bottom: 6px solid #005b2e;
+        }
+
+        /* Text im Kasten */
+        .download-text {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        /* Styling für die Logos innerhalb der Knöpfe */
+        .provider-logo {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-container">
+
+        <!-- BLAUER KASTEN: Leitet jetzt fehlerfrei zu deiner gewünschten Overwatch Steam-Shopseite weiter -->
+        <a href="https://store.steampowered.com/app/2357570/Overwatch/" target="_blank" class="download-card steam-card">
+            <div class="download-text">Download It On</div>
+            <img src="New_Steam_Logo_with_name.jpg" alt="Steam" class="provider-logo">
+        </a>
+
+        <!-- GRÜNER KASTEN: Leitet direkt zur offiziellen Overwatch-Webseite weiter und lädt das Logo -->
+        <a href="https://overwatch.blizzard.com/de-de/" target="_blank" class="download-card website-card">
+            <div class="download-text">Download It On</div>
+            <img src="overwatch-logo.jpg" alt="Overwatch Website" class="provider-logo">
+        </a>
+
+    </div>
+
+</body>
+</html>

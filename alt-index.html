@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitus Fiehl Webseite</title>
+    <style>
+        /* Zentriert den gesamten weißen Kasten auf dem Bildschirm */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #112244; 
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* Der weiße Hauptkasten hält alle drei Blöcke untereinander */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 950px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Ein einzelner Themen-Block */
+        .theme-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Sorgt dafür, dass der Text über den Medien zentriert steht */
+        .header-text-container {
+            text-align: center;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        /* Der Medien-Bereich wird in zwei Hälften geteilt */
+        .content-layout {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start; /* Starten oben exakt bündig */
+        }
+
+        /* Die linke Hälfte für die Bilder und Links */
+        .left-half {
+            flex: 1;
+            max-width: 440px;
+            padding-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Die rechte Hälfte für die Videos und hellblauen Kästen */
+        .right-half {
+            flex: 1;
+            max-width: 440px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Die Überschrift bleibt knackig und gut lesbar */
+        .name-container {
+            font-size: 50px;
+            letter-spacing: 1px;
+            margin: 0;
+            line-height: 1.2;
+            font-weight: 900;
+            text-align: center;
+            word-spacing: -5px;
+        }
+
+        /* Deine Wunschfarben */
+        .gruen   { color: #00FF00; }
+        .rot     { color: #FF0000; }
+        .orange  { color: #FF8C00; }
+        .tuerkis { color: #00FFFF; }
+
+        /* PERFEKTE SYMMETRIE: Erzwingt perfekte Gleichheit für alle Bilder */
+        .game-image {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Genau dasselbe Breitbild-Format wie die Videos */
+            object-fit: cover;    /* Schneidet das Bild perfekt zu, ohne es zu quetschen */
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* PERFEKTE SYMMETRIE: Erzwingt perfekte Gleichheit für alle Videos */
+        .game-video {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Genau dasselbe Breitbild-Format wie die Bilder */
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Styling für den coolen Info-Link unter den Bildern */
+        .info-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #FF8C00; /* Cooles Brawl-Stars-Orange */
+            color: #ffffff;
+            text-decoration: none; 
+            font-size: 14px;
+            border-radius: 8px;
+            box-shadow: 0 4px 0 #b36200;
+            transition: all 0.1s ease;
+            text-align: center;
+            width: 100%; /* Exakt so breit wie das Bild */
+            box-sizing: border-box;
+        }
+
+        .info-button:hover {
+            background-color: #ffa433;
+        }
+
+        .info-button:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+
+        /* Styling für den hellblauen Kasten mit dem Text "Zum Download" */
+        .blue-box {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00d2ff; /* Leuchtendes Gaming-Hellblau */
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 8px;
+            box-shadow: 0 4px 0 #009ec2;
+            transition: all 0.1s ease;
+            text-align: center;
+            width: 100%; /* Exakt so breit wie das Video */
+            box-sizing: border-box;
+        }
+
+        .blue-box:hover {
+            background-color: #40dfff;
+        }
+
+        .blue-box:active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+
+        /* Gleichmäßige Abstände zwischen allen Spiele-Blöcken */
+        .game-spacer-top {
+            margin-top: 35px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- ================= ABSCHNITT 1: BRAWL STARS ================= -->
+        <div class="theme-block">
+            <div class="header-text-container">
+                <div class="name-container">
+                    <span class="gruen">B</span><span class="gruen">e</span><span class="gruen">s</span><span class="gruen">t</span>
+                    <span> </span>
+                    <span class="tuerkis">G</span><span class="tuerkis">a</span><span class="tuerkis">m</span><span class="tuerkis">e</span><span class="tuerkis">s</span>
+                    <span> </span>
+                    <span class="rot">&amp;</span>
+                    <span> </span>
+                    <span class="orange">H</span><span class="orange">i</span><span class="orange">g</span><span class="orange">h</span><span class="orange">l</span><span class="orange">i</span><span class="orange">g</span><span class="orange">h</span><span class="orange">t</span><span class="orange">s</span>
+                </div>
+            </div>
+
+            <div class="content-layout">
+                <div class="left-half">
+                    <img src="Brawl-Stars-Supercell.jpg" alt="Brawl Stars" class="game-image">
+                    <a href="https://supercell.com" target="_blank" class="info-button">Wichtigste Game-Infos</a>
+                </div>
+                <div class="right-half">
+                    <video controls class="game-video">
+                        <source src="Moments & Edits BS.mp4" type="video/mp4">
+                    </video>
+                    <a href="download.html" class="blue-box">Zum Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ABSCHNITT 2: MINECRAFT ================= -->
+        <div class="theme-block game-spacer-top">
+            <div class="content-layout">
+                <div class="left-half">
+                    <img src="minecraft.jpg" alt="Minecraft" class="game-image">
+                    <a href="https://minecraft.net" target="_blank" class="info-button">Wichtigste Game-Infos</a>
+                </div>
+                <div class="right-half">
+                    <video controls class="game-video">
+                        <source src="minecraftclips.mp4" type="video/mp4">
+                    </video>
+                    <a href="minecraft-leere-seite.html" class="blue-box">Zum Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ABSCHNITT 3: OVERWATCH ================= -->
+        <div class="theme-block game-spacer-top">
+            <div class="content-layout">
+                <div class="left-half">
+                    <img src="overwatch.jpg.jpg" alt="Overwatch" class="game-image">
+                    <!-- REPARIERT: Verlinkt jetzt direkt auf deine neu erstellte Info-Seite -->
+                    <a href="overwatch-infos.html" class="info-button">Wichtigste Game-Infos</a>
+                </div>
+                <div class="right-half">
+                    <video controls class="game-video">
+                        <source src="overwatchclips.mp4" type="video/mp4">
+                    </video>
+                    <a href="download-overwatch.html" class="blue-box">Zum Download</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
