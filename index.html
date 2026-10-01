@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitus Fiehl Webseite</title>
     <style>
-        /* Grund-Styling der Seite */
         body {
             margin: 0;
             padding: 0;
-            padding-top: 80px; /* Schafft Platz oben, damit die Menüleiste nichts verdeckt */
+            padding-top: 80px; 
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -18,8 +17,6 @@
             font-family: 'Arial Black', sans-serif;
             box-sizing: border-box;
         }
-
-        /* Die minimalistische Menüleiste ganz oben am Bildschirm */
         .top-navbar {
             position: fixed;
             top: 0;
@@ -33,10 +30,8 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 9999;
             box-sizing: border-box;
-            gap: 15px; /* Erzeugt einen gleichmäßigen Abstand zwischen den Kästen */
+            gap: 15px;
         }
-
-        /* Styling für alle drei Kästen in der Menüleiste */
         .navbar-brand {
             color: #000000; 
             text-decoration: none;
@@ -50,13 +45,7 @@
             text-transform: uppercase; 
             transition: background-color 0.1s ease;
         }
-
-        /* Kleiner Hover-Effekt, wenn man mit der Maus über die Kästen fährt */
-        .navbar-brand:hover {
-            background-color: #f0f0f0;
-        }
-
-        /* Der weiße Hauptkasten hält alle drei Blöcke untereinander */
+        .navbar-brand:hover { background-color: #f0f0f0; }
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -70,23 +59,17 @@
             box-sizing: border-box;
             margin-bottom: 40px;
         }
-
-        /* Ein einzelner Themen-Block */
         .theme-block {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
-        /* Sorgt dafür, dass der Text über den Medien zentriert steht */
         .header-text-container {
             text-align: center;
             margin-bottom: 15px;
             width: 100%;
         }
-
-        /* Der Medien-Bereich wird in zwei Hälften geteilt */
         .content-layout {
             display: flex;
             flex-direction: row;
@@ -94,8 +77,6 @@
             justify-content: center;
             align-items: flex-start;
         }
-
-        /* Die linke Hälfte für die Bilder und Links */
         .left-half {
             flex: 1;
             max-width: 440px;
@@ -104,8 +85,6 @@
             flex-direction: column;
             align-items: center;
         }
-
-        /* Die rechte Hälfte für die Videos und hellblauen Kästen */
         .right-half {
             flex: 1;
             max-width: 440px;
@@ -114,8 +93,6 @@
             flex-direction: column;
             align-items: center;
         }
-
-        /* Die Überschrift bleibt knackig und gut lesbar */
         .name-container {
             font-size: 50px;
             letter-spacing: 1px;
@@ -125,14 +102,11 @@
             text-align: center;
             word-spacing: -5px;
         }
-
-        /* Deine Wunschfarben */
         .gruen   { color: #00FF00; }
         .rot     { color: #FF0000; }
         .orange  { color: #FF8C00; }
         .tuerkis { color: #00FFFF; }
 
-        /* PERFEKTE SYMMETRIE: Bilder */
         .game-image {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -141,18 +115,14 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        /* PERFEKTE SYMMETRIE: Videos */
         .game-video {
             width: 100%;
             aspect-ratio: 16 / 9;
-            object-fit: cover;
+            border: none;
             display: block;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        /* Styling für den coolen Info-Link unter den Bildern */
         .info-button {
             display: inline-block;
             margin-top: 15px;
@@ -168,11 +138,9 @@
             width: 100%;
             box-sizing: border-box;
         }
-
         .info-button:hover { background-color: #ffa433; }
         .info-button:active { transform: translateY(4px); box-shadow: none; }
 
-        /* Styling für den hellblauen Kasten mit dem Text "Zum Download" */
         .blue-box {
             display: inline-block;
             margin-top: 15px;
@@ -188,7 +156,6 @@
             width: 100%;
             box-sizing: border-box;
         }
-
         .blue-box:hover { background-color: #40dfff; }
         .blue-box:active { transform: translateY(4px); box-shadow: none; }
 
@@ -197,17 +164,15 @@
 </head>
 <body>
 
-    <!-- Die obere Menüleiste mit den aktualisierten Texten -->
     <nav class="top-navbar">
         <a href="brawl-highlights.html" class="navbar-brand">Brawl Stars Clips & Highlights</a>
-        <!-- HIER GEÄNDERT: Text wurde zu Minecraft Animation Movies aktualisiert -->
         <a href="minecraft-highlights.html" class="navbar-brand">Minecraft Animation Movies</a>
         <a href="overwatch-highlights.html" class="navbar-brand">Overwatch Animation Movies</a>
     </nav>
 
     <div class="wrapper">
         
-        <!-- ================= ABSCHNITT 1: BRAWL STARS ================= -->
+        <!-- BRAWL STARS -->
         <div class="theme-block">
             <div class="header-text-container">
                 <div class="name-container">
@@ -220,22 +185,20 @@
                     <span class="orange">H</span><span class="orange">i</span><span class="orange">g</span><span class="orange">h</span><span class="orange">l</span><span class="orange">i</span><span class="orange">g</span><span class="orange">h</span><span class="orange">t</span><span class="orange">s</span>
                 </div>
             </div>
-
             <div class="content-layout">
                 <div class="left-half">
                     <img src="Brawl-Stars-Supercell.jpg" alt="Brawl Stars" class="game-image">
                     <a href="https://supercell.com" target="_blank" class="info-button">Wichtigste Game-Infos</a>
                 </div>
                 <div class="right-half">
-                    <video controls class="game-video">
-                        <source src="Moments & Edits BS.mp4" type="video/mp4">
-                    </video>
+                    <!-- YouTube-Streaming Player -->
+                    <iframe src="https://youtube.com" title="Brawl Stars Video" allowfullscreen class="game-video"></iframe>
                     <a href="download.html" class="blue-box">Zum Download</a>
                 </div>
             </div>
         </div>
 
-        <!-- ================= ABSCHNITT 2: MINECRAFT ================= -->
+        <!-- MINECRAFT -->
         <div class="theme-block game-spacer-top">
             <div class="content-layout">
                 <div class="left-half">
@@ -243,15 +206,14 @@
                     <a href="https://minecraft.net" target="_blank" class="info-button">Wichtigste Game-Infos</a>
                 </div>
                 <div class="right-half">
-                    <video controls class="game-video">
-                        <source src="minecraftclips.mp4" type="video/mp4">
-                    </video>
+                    <!-- YouTube-Streaming Player -->
+                    <iframe src="https://youtube.com" title="Minecraft Video" allowfullscreen class="game-video"></iframe>
                     <a href="minecraft-leere-seite.html" class="blue-box">Zum Download</a>
                 </div>
             </div>
         </div>
 
-        <!-- ================= ABSCHNITT 3: OVERWATCH ================= -->
+        <!-- OVERWATCH -->
         <div class="theme-block game-spacer-top">
             <div class="content-layout">
                 <div class="left-half">
@@ -259,9 +221,8 @@
                     <a href="https://blizzard.com" target="_blank" class="info-button">Wichtigste Game-Infos</a>
                 </div>
                 <div class="right-half">
-                    <video controls class="game-video">
-                        <source src="overwatchclips.mp4" type="video/mp4">
-                    </video>
+                    <!-- YouTube-Streaming Player -->
+                    <iframe src="https://youtube.com" title="Overwatch Video" allowfullscreen class="game-video"></iframe>
                     <a href="download-overwatch.html" class="blue-box">Zum Download</a>
                 </div>
             </div>

@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overwatch Video Highlights</title>
+    <title>Overwatch Animation Movies</title>
     <style>
-        /* Exakt derselbe Hintergrund wie auf der Startseite */
         body {
             margin: 0;
             padding: 20px;
@@ -17,8 +16,6 @@
             font-family: 'Arial Black', sans-serif;
             box-sizing: border-box;
         }
-
-        /* Der weiße Kasten passt sich flexibel der Höhe der Videos an */
         .wrapper {
             background-color: #ffffff;
             padding: 30px;
@@ -31,8 +28,6 @@
             flex-direction: column;
             align-items: center;
         }
-
-        /* Titel für den Highlight-Bereich */
         .page-title {
             font-size: 32px;
             color: #112244;
@@ -42,8 +37,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        /* Das Grid-Layout für die 6 Videos (2 Spalten) */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -51,23 +44,19 @@
             width: 100%;
             margin-bottom: 20px;
         }
-
-        /* Sorgt für perfekte Symmetrie im 16:9 Format für jedes Video */
         .highlight-video {
             width: 100%;
             aspect-ratio: 16 / 9;
-            object-fit: cover;
+            border: none;
             display: block;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-
-        /* Zurück-Button zur Hauptseite */
         .back-button {
             display: inline-block;
             margin-top: 15px;
             padding: 10px 25px;
-            background-color: #00d2ff; /* Schickes Gaming-Hellblau */
+            background-color: #00d2ff; 
             color: #ffffff;
             text-decoration: none;
             font-size: 14px;
@@ -76,68 +65,42 @@
             transition: all 0.1s ease;
             text-align: center;
         }
+        .back-button:hover { background-color: #40dfff; }
+        .back-button:active { transform: translateY(4px); box-shadow: none; }
 
-        .back-button:hover {
-            background-color: #40dfff;
-        }
-
-        .back-button:active {
-            transform: translateY(4px);
-            box-shadow: none;
-        }
-
-        /* Responsive Design für kleinere Bildschirme / Handys */
         @media (max-width: 768px) {
-            .video-grid {
-                grid-template-columns: 1fr;
-            }
-            .page-title {
-                font-size: 24px;
-            }
+            .video-grid { grid-template-columns: 1fr; }
+            .page-title { font-size: 24px; }
         }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
-        <h1 class="page-title">Overwatch Video Highlights</h1>
+        <h1 class="page-title">Overwatch Animation Movies</h1>
 
-        <!-- Das Grid mit allen 6 echten Videos -->
         <div class="video-grid">
             
             <!-- Video 1: Bastion Short -->
-            <video controls class="highlight-video">
-                <source src="overwatch-bastion-short.mp4" type="video/mp4">
-            </video>
+            <iframe src="https://youtube.com" title="The Last Bastion" allowfullscreen class="highlight-video"></iframe>
 
             <!-- Video 2: Winston Recall Short -->
-            <video controls class="highlight-video">
-                <source src="overwatch-winston-recall.mp4" type="video/mp4">
-            </video>
+            <iframe src="https://youtube.com" title="Recall" allowfullscreen class="highlight-video"></iframe>
 
             <!-- Video 3: Dragons Short -->
-            <video controls class="highlight-video">
-                <source src="overwatch-dragons-short.mp4" type="video/mp4">
-            </video>
+            <iframe src="https://youtube.com" title="Dragons" allowfullscreen class="highlight-video"></iframe>
 
             <!-- Video 4: McCree Reunion Short -->
-            <video controls class="highlight-video">
-                <source src="overwatch-mccree-reunion.mp4" type="video/mp4">
-            </video>
+            <iframe src="https://youtube.com" title="Reunion" allowfullscreen class="highlight-video"></iframe>
 
-            <!-- Video 5: Reinhardt Honor and Glory Short -->
-            <video controls class="highlight-video">
-                <source src="overwatch-reinhardt-honor.mp4" type="video/mp4">
-            </video>
+            <!-- Video 5: Reinhardt Honor Short -->
+            <iframe src="https://youtube.com" title="Honor and Glory" allowfullscreen class="highlight-video"></iframe>
 
             <!-- Video 6: Kiriko Short -->
-            <video controls class="highlight-video">
-                <source src="overwatch-kiriko-short.mp4" type="video/mp4">
-            </video>
+            <iframe src="https://youtube.com" title="Kiriko" allowfullscreen class="highlight-video"></iframe>
 
         </div>
 
-        <!-- Zurück-Button auf die index.html -->
         <a href="index.html" class="back-button">Zurück zur Startseite</a>
     </div>
 
